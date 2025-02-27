@@ -1,5 +1,6 @@
 import express from "express";
 import dotenv from "dotenv";
+import  cors from "cors";
 import connectDB from "./config/db.js";
 import colors from "colors";
 import path from "path";
@@ -13,7 +14,8 @@ dotenv.config();
 
 connectDB();
 
-const app = express(); // main thing
+const app = express(); 
+app.use(cors("https://notes-taking-applications.netlify.app"));// main thing
 const httpServer = createServer(app);
 const io = new Server(httpServer, {
   cors: {
