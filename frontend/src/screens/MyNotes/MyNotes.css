@@ -1,0 +1,217 @@
+/* MyNotes Component Styling */
+
+/* Main container styling */
+.mainback {
+  padding: 2rem 0;
+  min-height: 93vh;
+}
+
+/* Welcome title styling */
+.page-title {
+  font-size: 2rem;
+  padding-bottom: 1rem;
+  font-weight: 700;
+  color: #333;
+  border-bottom: 2px solid #f0f0f0;
+  margin-bottom: 1.5rem;
+}
+
+/* Create note button styling */
+.create-button {
+  background: linear-gradient(45deg, #4169e1, #0047ab);
+  border: none;
+  box-shadow: 0 4px 10px rgba(0, 71, 171, 0.25);
+  transition: all 0.3s ease;
+}
+
+.create-button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 15px rgba(0, 71, 171, 0.35);
+}
+
+/* Category filter styling */
+.filter-container {
+  background-color: #f9f9f9;
+  border-radius: 8px;
+  padding: 15px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+}
+
+.filter-select {
+  width: 100%;
+  padding: 8px 12px;
+  border-radius: 6px;
+  border: 1px solid #ced4da;
+  margin-bottom: 10px;
+}
+
+.clear-filter {
+  width: 100%;
+  transition: all 0.2s ease;
+}
+
+/* Card styling */
+.note-card {
+  border-radius: 10px;
+  border: none;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.08);
+  transition: all 0.3s ease;
+  margin-bottom: 1.2rem;
+  overflow: hidden;
+}
+
+.note-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.15);
+}
+
+/* Card header styling */
+.card-header {
+  background-color: #f8f9fa;
+  padding: 15px 20px;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+}
+
+.note-title {
+  font-weight: 600;
+  color: #2c3e50;
+  transition: color 0.2s;
+}
+
+.note-title:hover {
+  color: #3498db;
+}
+
+/* Action buttons */
+.action-buttons {
+  display: flex;
+  gap: 8px;
+}
+
+.edit-button {
+  background-color: #3498db;
+  border: none;
+  transition: all 0.2s;
+}
+
+.edit-button:hover {
+  background-color: #2980b9;
+  transform: translateY(-2px);
+}
+
+.delete-button {
+  background-color: #e74c3c;
+  border: none;
+  transition: all 0.2s;
+}
+
+.delete-button:hover {
+  background-color: #c0392b;
+  transform: translateY(-2px);
+}
+
+/* Card body styling */
+.card-body {
+  padding: 20px;
+  background-color: #fff;
+}
+
+/* Category badge */
+.category-badge {
+  display: inline-block;
+  margin-bottom: 15px;
+  padding: 6px 12px;
+  font-size: 0.85rem;
+  font-weight: 500;
+  background-color: #2ecc71;
+  color: white;
+  border-radius: 20px;
+}
+
+/* Content styling */
+.note-content {
+  line-height: 1.6;
+  color: #444;
+}
+
+/* Blockquote styling */
+blockquote {
+  border-left: 3px solid #3498db;
+  padding-left: 15px;
+  color: #555;
+}
+
+.blockquote-footer {
+  margin-top: 15px;
+  color: #7f8c8d;
+  font-size: 0.9rem;
+}
+
+/* Empty state message */
+.empty-message {
+  text-align: center;
+  padding: 30px;
+  color: #7f8c8d;
+  background-color: #f9f9f9;
+  border-radius: 10px;
+  margin: 20px 0;
+  font-size: 1.2rem;
+}
+
+/* Responsive styles */
+@media (max-width: 768px) {
+  .page-title {
+    font-size: 1.5rem;
+  }
+
+  .card-header {
+    flex-direction: column;
+  }
+
+  .note-title {
+    margin-bottom: 15px;
+  }
+
+  .action-buttons {
+    width: 100%;
+    justify-content: space-between;
+  }
+
+  .edit-button,
+  .delete-button {
+    width: 48%;
+  }
+
+  .mainback {
+    padding: 1rem;
+  }
+}
+
+@media (max-width: 576px) {
+  .filter-container {
+    margin-top: 15px;
+  }
+
+  .create-button {
+    width: 100%;
+  }
+}
+
+/* Animated accordion */
+.accordion-toggle {
+  position: relative;
+  padding-left: 15px;
+}
+
+.accordion-toggle:before {
+  content: "▶";
+  position: absolute;
+  left: 0;
+  transform: translateY(-2px);
+  font-size: 0.7rem;
+  transition: transform 0.2s ease;
+}
+
+.accordion-toggle[aria-expanded="true"]:before {
+  transform: rotate(90deg);
+}

@@ -1,0 +1,191 @@
+:root {
+  /* Light theme variables */
+  --background-color: #ffffff;
+  --text-color: #333333;
+  --secondary-text: #555555;
+  --muted-text: #6c757d;
+  --border-color: #e0e0e0;
+  --card-bg: #ffffff;
+  --input-bg: #f9f9f9;
+  --hover-bg: #f0f0f0;
+  --header-bg: linear-gradient(to right, #4a6bff, #77a6f7);
+  --header-text: white;
+  --code-bg: #f1f3f5;
+  --shadow-color: rgba(0, 0, 0, 0.1);
+}
+
+/* Dark theme variables */
+[data-theme="dark"] {
+  --background-color: #121212;
+  --text-color: #e0e0e0;
+  --secondary-text: #c0c0c0;
+  --muted-text: #a0a0a0;
+  --border-color: #444444;
+  --card-bg: #1e1e1e;
+  --input-bg: #2d2d2d;
+  --hover-bg: #2a2a2a;
+  --header-bg: linear-gradient(to right, #304080, #4a6bff);
+  --header-text: white;
+  --code-bg: #2d2d33;
+  --shadow-color: rgba(0, 0, 0, 0.3);
+}
+
+/* SingleNote Component Styling */
+.edit-note-container {
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.note-edit-card {
+  border: none;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 5px 15px var(--shadow-color);
+  margin-bottom: 2rem;
+  transition: all 0.3s ease;
+  background-color: var(--card-bg);
+}
+
+.note-edit-card:hover {
+  box-shadow: 0 8px 20px var(--shadow-color);
+}
+
+.card-header {
+  background: var(--header-bg);
+  color: var(--header-text);
+  font-weight: 600;
+  padding: 1rem 1.5rem;
+  font-size: 1.2rem;
+  border: none;
+}
+
+.card-body {
+  padding: 1.8rem;
+  background-color: var(--card-bg);
+  color: var(--text-color);
+}
+
+/* Form styling */
+.form-group {
+  margin-bottom: 1.5rem;
+}
+
+.form-label {
+  font-weight: 600;
+  color: var(--text-color);
+  margin-bottom: 0.5rem;
+  display: block;
+  font-size: 0.95rem;
+}
+
+.form-control {
+  border-radius: 6px;
+  border: 1px solid var(--border-color);
+  padding: 0.8rem 1rem;
+  transition: all 0.2s;
+  font-size: 1rem;
+  background-color: var(--input-bg);
+  color: var(--text-color);
+}
+
+.form-control:focus {
+  border-color: #4a6bff;
+  box-shadow: 0 0 0 0.2rem rgba(74, 107, 255, 0.15);
+  background-color: var(--input-bg);
+}
+
+.form-control::placeholder {
+  color: var(--muted-text);
+  font-size: 0.95rem;
+}
+
+/* Textarea specific styling */
+textarea.form-control {
+  min-height: 120px;
+  line-height: 1.5;
+  resize: vertical;
+}
+
+/* Preview card styling */
+.preview-card {
+  border: 1px solid var(--border-color);
+  border-radius: 8px;
+  margin: 1.5rem 0;
+  overflow: hidden;
+}
+
+.preview-card .card-header {
+  background: linear-gradient(to right, #6c757d, #495057);
+  font-size: 1rem;
+  padding: 0.8rem 1.2rem;
+}
+
+.preview-card .card-body {
+  padding: 1.2rem;
+  background-color: var(--card-bg);
+}
+
+/* Markdown content styling */
+.markdown-content {
+  line-height: 1.7;
+  color: var(--text-color);
+}
+
+.markdown-content h1,
+.markdown-content h2,
+.markdown-content h3 {
+  margin-top: 1rem;
+  margin-bottom: 0.8rem;
+  color: var(--text-color);
+}
+
+.markdown-content p {
+  margin-bottom: 1rem;
+}
+
+.markdown-content ul,
+.markdown-content ol {
+  padding-left: 1.5rem;
+  margin-bottom: 1rem;
+}
+
+.markdown-content a {
+  color: #4a6bff;
+  text-decoration: none;
+}
+
+.markdown-content code {
+  background-color: var(--code-bg);
+  padding: 0.2rem 0.4rem;
+  border-radius: 4px;
+  font-family: monospace;
+}
+
+.card-footer {
+  background-color: var(--card-bg);
+  color: var(--muted-text);
+  font-size: 0.9rem;
+  padding: 0.8rem 1.5rem;
+  border-top: 1px solid var(--border-color);
+}
+
+/* Fix for accordion toggle visibility in both themes */
+.accordion-toggle {
+  position: relative;
+  padding-left: 15px;
+  color: var(--text-color) !important;
+}
+
+.accordion-toggle:before {
+  content: "▶";
+  position: absolute;
+  left: 0;
+  transform: translateY(-2px);
+  font-size: 0.7rem;
+  transition: transform 0.2s ease;
+  color: var(--text-color);
+}
+
+.accordion-toggle[aria-expanded="true"]:before {
+  transform: rotate(90deg);
+}

@@ -1,0 +1,4 @@
+
+export const THEME_TOGGLE = "THEME_TOGGLE";
+export const THEME_SET_LIGHT = "THEME_SET_LIGHT";
+export const THEME_SET_DARK = "THEME_SET_DARK";
